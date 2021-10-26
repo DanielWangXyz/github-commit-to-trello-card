@@ -20,7 +20,7 @@ const trelloListNamePullRequestClosed = core.getInput('trello-list-name-pr-close
 function getCardNumber(message) {
   console.log(`getCardNumber(${message})`);
   let ids = message && message.length > 0 ? message.replace(regexPullRequest, "").match(/ \#\d+/g) : [];
-  return ids && ids.length > 0 ? ids[ids.length-1].replace(' #', ' ') : null;
+  return ids && ids.length > 0 ? ids[ids.length-1].replace(' #', '') : null;
 }
 
 async function getCardOnBoard(board, message) {
