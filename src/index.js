@@ -8,7 +8,7 @@ const { pull_request, head_commit } = context.payload;
 // Message will be like the below message. (First # is trello card number, second # is PR number)
 // For ex: Fix SceneList width issue #74 (#210)
 // 
-const regexPullRequest = / (\#\d+)/g;
+const regexPullRequest = / \(\#\d+\)/g;
 const trelloApiKey = core.getInput('trello-api-key', { required: true });
 const trelloAuthToken = core.getInput('trello-auth-token', { required: true });
 const trelloBoardId = core.getInput('trello-board-id', { required: true });
