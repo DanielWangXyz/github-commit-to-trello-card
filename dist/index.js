@@ -8743,7 +8743,7 @@ const trelloListNamePullRequestClosed = _actions_core__WEBPACK_IMPORTED_MODULE_1
 function getCardNumber(message) {
   console.log(`getCardNumber(${message})`);
   let ids = message && message.length > 0 ? message.replace(regexPullRequest, "").match(/ \#\d+/g) : [];
-  return ids && ids.length > 0 ? ids[ids.length-1].replace(' #', ' ') : null;
+  return ids && ids.length > 0 ? ids[ids.length-1].replace(' #', '') : null;
 }
 
 async function getCardOnBoard(board, message) {
